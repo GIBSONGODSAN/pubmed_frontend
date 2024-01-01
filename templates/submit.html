@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Medical Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 data-text="Scraped Medical Data">Scraped Medical Data</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="header-cell">TITLE</th>
+                    <th class="header-cell">AUTHOR</th>
+                    <th class="header-cell">CITATION</th>
+                    <th class="header-cell">PMID</th>
+                    <th class="header-cell">FREE</th>
+                    <th class="header-cell">REVIEW</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in scraped_data %}
+                    <tr>
+                        <td>{{ item['title'] }}</td>
+                        <td>{{ item['author'] }}</td>
+                        <td>{{ item['citation'] }}</td>
+                        <td>{{ item['pmid'] }}</td>
+                        <td>{{ item['free'] }}</td>
+                        <td>{{ item['review'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="developer-section">
+        <p>Developed by Gibson J & Susi Azsaria</p>
+    </div>
+</body>
+</html>

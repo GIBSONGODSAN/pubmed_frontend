@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrapy Crawl Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/nih_logo.jpg') }}" alt="Logo"> <!-- Replace with the path to your logo image -->
+        </div>
+        <div class="header-text">
+            <h1>National Library Of Medicine</h1>
+            <p style="font-family: 'Cambria'; margin-top: 0;">National centre for Biotechnology information</p>
+        </div>
+    </div>
+    <div class="medical-image">
+        <img src="{{ url_for('static', filename='images/pub.jpg') }}" alt="Medical Image"> <!-- Replace with the path to your medical image -->
+    </div>
+
+    <div class="medical-info">
+        <p>PubMed® comprises more than 36 million citations for biomedical literature from MEDLINE, life science journals, and online books.<br> Citations may include links to full text content from PubMed Central and publisher web sites.</p>
+        <!-- Add more medical information as needed -->
+    </div>
+
+    <form action="/submit" method="post">
+        <input type="text" id="search_term" name="search_term" placeholder="Type here...">
+        <input type="submit" value="Search">
+        <div class="loading" id="loading"></div>
+    </form>
+
+    <div class="disclaimer">
+        <p>This website shows scraped data from the website <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" style="color: #fff;">https://pubmed.ncbi.nlm.nih.gov/</a> and displays the Top 10 results for you.</p>
+    </div>
+
+    <!-- User Details -->
+    <div class="user">
+    <div class="user-details">
+        <div class="user-image">
+            <img src="{{ url_for('static', filename='images/us.jpg')}}" alt="User Image"> <!-- Replace with the path to your user image -->
+        </div>
+        <h2>GIBSON J</h2>
+        <p><a href="https://www.linkedin.com/in/gibson-j/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+    <div class="user-details">
+        <div class="user-image">
+            <img src="{{ url_for('static', filename='images/us.jpg')}}" alt="User Image"> 
+        </div>
+        <h2>SUSI AZSARIA</h2>
+        <p><a href="https://www.linkedin.com/in/susi-azsaria-0a188522a/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+</div>
+
+</body>
+</html>

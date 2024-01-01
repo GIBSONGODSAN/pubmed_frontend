@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('/static/images/scrap1.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 40px; /* Double margin space */
+}
+
+.logo img {
+    width: 80px; /* Slightly bigger logo */
+    height: auto;
+}
+
+.header-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px; /* Adjust the margin space */
+}
+
+.header-text h1 {
+    margin-bottom: 5px; /* Adjust the space between h1 and p */
+}
+
+.medical-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.medical-image img {
+    width: 150px; /* Adjust the width of the image as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: Add a border radius for rounded corners */
+}
+
+.medical-info {
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding */
+}
+
+form {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Adjust margin from medical-info */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px; /* Adjust width of the input text */
+    color: #8B0000; /* Dark red color for input text */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+input[type="text"]:hover {
+    transform: scale(1.1); /* Zoom out on hover */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #335929;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition on click */
+}
+
+input[type="submit"]:active {
+    transform: scale(0.9); /* Zoom in on click */
+}
+
+.loading {
+    display: none;
+    border: 4px solid #f3f3f3; /* Light gray border */
+    border-top: 4px solid #3498db; /* Blue border on top */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.disclaimer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    color: #fff;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    cursor: pointer;
+}
+
+.disclaimer:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background on hover */
+}
+
+.disclaimer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.disclaimer a:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+.disclaimer a:visited {
+    color: #008000; /* Green color for visited link */
+}
+
+.disclaimer a:active {
+    color: #008000; /* Green color on click */
+}
+
+.user {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+}
+.user-details > * {
+    margin: 0 80px; /* Adjust the margin as needed */
+}
+.user-details {
+    text-align: center;
+    margin: 20px;
+    opacity: 0;
+    animation: slideIn 2s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-image {
+    margin-bottom: 10px;
+}
+
+.user-image img {
+    width: 100px; /* Adjust the width of the image as needed */
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #fff; /* White border around the image */
+}
+
+.user-details h2 {
+    margin-bottom: 5px;
+}
+
+.user-details p {
+    color: #ccc;
+}
+
+.user-details p a {
+    color: #ff0000; /* Red color for LinkedIn link */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.user-details p a:hover {
+    color: #00ff00; /* Green color on hover */
+}

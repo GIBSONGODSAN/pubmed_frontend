@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    border: 10px solid transparent;
+    border-image: url('/static/images/scrap.jpg') 50 round; /* Replace with the path to your border image */
+}
+
+
+h1 {
+    color: #fff;
+    text-align: center;
+    background-image: url('/static/images/scrap.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    transition: transform 0.3s; /* Add transition for smooth zoom-out effect */
+}
+/* Add this to create a 3D shadow effect */
+h1::before {
+    content: attr(data-text); /* Use the content attribute to display the original text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* Adjust the shadow color */
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* 3D shadow effect */
+    z-index: -1;
+}
+h1:hover {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    border: 2px double #666668; /* Double border for the table */
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    transition: background-color 0.3s; /* Smooth transition for background color change on hover */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+td {
+    font-family: 'Times New Roman', serif;
+}
+
+.header-cell {
+    background-color: #26323e;
+    color: #fff;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Hover effects for each column */
+tbody tr:hover td:hover {
+    background-color: #938f85;
+}
+
+/* Hover effects for each row */
+tbody tr:hover td {
+    background-color: #f0f0f0;
+}
+
+/* Hover effect for header cells */
+th:hover {
+    background-color: #141730;
+    color: #fff;
+}
+
+
+/* Add this to your existing CSS */
+.developer-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.developer-section p {
+    font-size: 14px;
+    color: #777;
+    transition: transform 0.3s, font-weight 0.3s; /* Add transition for smooth effect */
+}
+
+.developer-section p:hover {
+    transform: scale(1.1); /* Zoom out effect on hover */
+    font-weight: bold; /* Bold text on hover */
+}
+
+
+
+
+
